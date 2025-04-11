@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIVEWAYS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <script src="js/main.js"></script>
+    <header>
+        <nav>
+            <a href="index.html" id="logo"><img src="img/logo.png" alt="logowebsite"></a>
+            <ul>
+                <li>
+                    <a href="#">HOME</a>
+                    <!-- <ul>
+                        <li><a href="#">HOME 1</a></li>
+                        <li><a href="#">HOME 2</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">VEHICLES</a></li>
+                <li><a href="#">RENTALS</a></li>
+            </ul>
+            <a href="#">CONTAC US</a>
+        </nav>
+
+        <nav class="mobile " data-aos="flip-right">
+          <a href="index.html"><img src="img/logo.png" alt="LOGO"></a>
+          <button onclick="menuMobile()"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+
+        <div id="cont-menu-mobile">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">VEHICLES</a>
+            <a href="#">RENTALS</a>
+            <a href="#">CONTAC US</a>
+
+        </div>
+
+        <div id="hero"  data-aos="zoom-in-down" data-aos-duration="1000">
+            <div class="hero-left">
+                <h3>PLAN YOUR TRIP NOW</h3>
+                <h1>EXPLORE THE WORLD WITH US</h1>
+
+                <div class="hero-buttons">
+                    <a href="#">Book A Ride-</a>
+                    <p>OR</p>
+                    <button onclick="modalVideo()"><i class="fa-solid fa-play"></i></button>
+
+                </div>
+                <div class="hero-info-left">
+                    <h4>WHATS NEW-------------------</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita odio dolor quae repellendus laudantium.</p>
+
+                </div>
+            </div>
+           
+        
+            <div class="hero-right">
+                <div class="hero-info-right">
+                    <h4>GET <b>10%</b> OFF FOR <br> FAMILY CAR <br>TYPE</h4>
+                    <img src="img/studio-shot-of-three.png" alt="Vehículo familiar">
+                </div>
+            </div>
+        </div>
+
+    </header>
+<main>
+
+
+    <section id="counters" data-aos="fade-down-right">
+     <div class="col-counter" data-aos="fade-right"data-aos-duration="1000">
+        <h3>CAR RENDER</h3>
+        <p>240</p>
+     </div>
+
+     <div class="col-counter" data-aos="fade-right" data-aos-duration="3000">
+        <h3>SATISFIED CLIENTS</h3>
+        <P>12+</P>
+     </div>
+
+     <div class="col-counter" data-aos="fade-right"data-aos-duration="5000">
+        <h3>YEARS EXPERIENCE</h3>
+        <p>12+</p>
+     </div>
+     
+     <div class="col-counter" data-aos="fade-right"data-aos-duration="7000">
+        <h3>CAR TYPE</h3>
+        <p>18</p>
+     </div>
+     
+    </section>
+
+
+    <section id="about">
+        <div class="about-left">
+            <h3>ABOUT US</h3>
+            <h2>PROVIDING RELIABLE CAR RENTALS</h2>
+            <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident sed delectus quam, officia dignissimos exercitationem maiores perferendis, repellat assumenda aliquam! Sed minima temporibus nam cumque delectus vitae pariatur suscipit.</P>
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas magnam quam animi, tenetur unde reprehenderit!</P>
+        <div class="fila">
+            <div class="col-about">
+                <span><i class="fa-solid fa-shield-heart"></i></span>
+                <h4>SAFE & TRUSTED</h4>
+            </div>
+            <div class="col-about blue">
+                <span><i class="fa-solid fa-wallet"></i></span>
+                <h4>AFFORDABLE PRICE</h4>
+            </div>
+        </div>
+        <hr>
+        <div class="fila">
+            <div class="col-ceo">
+                <img src="img/Image-CEO.png" alt="CEO">
+                <div class="datos">
+                    <h3>JAMES AUSTIN</h3>
+                    <p>founder & ceo</p>
+                </div>
+            </div>
+            <div class="col-ceo-img">
+                <img src="img/James Austin.png" alt="FIRMA">
+            </div>
+        </div>
+
+        </div>
+        <div class="about-right"data-aos="fade-up-left" data-aos-duration="3000">
+        <button><i class="fa-solid fa-play"></i></button>
+        </div>
+
+    </section>
+
+    
+
+    <section id="carslist">
+        <div class="fila-title">
+            <div class="carslist-left">
+                <h3>CARS LIST</h3>
+                <h2>CHOOSE THE CAR THAT YOU NEED</h2>
+            </div>
+
+            <div class="carslist-rigth">
+                <button>Discover vehicles</button>
+            </div>
+        </div>
+
+        <div class="fila">
+
+
+
+            <div class="col-car">
+                <div class="left">
+                    <img src="img/blue-retro.png" data-aos="flip-left"data-aos-duration="2000" alt="vehículo azul">
+                </div>
+                
+                <div class="right"data-aos="fade-down-right"  data-aos-duration="2000">
+                    <h3>$69<span>/Day</span></h3>
+                    <h2>RESTRO ZAPOROZHETS</h2>
+                    <hr>
+                    <ul>
+                        <li><i class="fa-solid fa-gas-pump"></i>Diesel</li>
+                        <li><i class="fa-brands fa-rev"></i>5.000 Miles</li>
+                        <li><i class="fa-solid fa-car-side"></i>Family</li>
+                        <li><i class="fa-solid fa-car-side"></i>Manual</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <p>AVAILABLE</p>
+                        <button>BooK Now -</button>
+                    </div>
+
+                    <p class="discount">20% off</p>
+                </div>
+            </div>
+
+
+
+            <div class="col-car">
+                <div class="left">
+                    <img src="img/sport-car-2023.png" data-aos="flip-left"data-aos-duration="2000" alt="vehículo negro">
+                </div>
+                
+                <div class="right"data-aos="fade-down-right" data-aos-duration="2000">
+                    <h3>$79<span>/Day</span></h3>
+                    <h2>BLACK NISSAN GT-R</h2>
+                    <hr>
+                    <ul>
+                        <li><i class="fa-solid fa-gas-pump"></i>Diesel</li>
+                        <li><i class="fa-brands fa-rev"></i>3.000 Miles</li>
+                        <li><i class="fa-solid fa-car-side"></i>Sport</li>
+                        <li><i class="fa-solid fa-car-side"></i>Automatic</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <p>AVAILABLE</p>
+                        <button>BooK Now -</button>
+                    </div>
+                    <p class="discount">20% off</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-car">
+                <div class="left">
+                    <img src="img/studio-shot-of.png" data-aos="flip-left"data-aos-duration="2000" alt="vehículo gris">
+                </div>
+                
+                <div class="right"data-aos="fade-down-right"data-aos-duration="2000">
+                    <h3>$59<span>/Day</span></h3>
+                    <h2>VOLKSWAGEN PASSAT</h2>
+                    <hr>
+                    <ul>
+                        <li><i class="fa-solid fa-gas-pump"></i>Diesel</li>
+                        <li><i class="fa-brands fa-rev"></i>7.000 Miles</li>
+                        <li><i class="fa-solid fa-car-side"></i>Family</li>
+                        <li><i class="fa-solid fa-car-side"></i>Automatic</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <p>AVAILABLE</p>
+                        <button>BooK Now -</button>
+                    </div>
+                    <p class="discount">20% off</p>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col-car">
+                <div class="left">
+                    <img src="img/blue-car.png" data-aos="flip-left"data-aos-duration="2000" alt="vehículo azul oscuro">
+                </div>
+                
+                <div class="right"data-aos="fade-down-right"data-aos-duration="2000">
+                    <h3>$60<span>/Day</span></h3>
+                    <h2>BRILLIANCE JUNJIE FRV</h2>
+                    <hr>
+                    <ul>
+                        <li><i class="fa-solid fa-gas-pump"></i>Diesel</li>
+                        <li><i class="fa-brands fa-rev"></i>6.000 Miles</li>
+                        <li><i class="fa-solid fa-car-side"></i>Family</li>
+                        <li><i class="fa-solid fa-car-side"></i>Manual</li>
+                    </ul>
+
+                    <div class="buttons">
+                        <p>AVAILABLE</p>
+                        <button>Book Now -</button>
+                    </div>
+                    <p class="discount">20% off</p>
+                </div>
+            </div>
+
+
+
+
+
+
+
+                
+                
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    </section>
+
+    <section id="car-rentals">
+    <h3>WHY CHOOSE US</h3>
+    <h2>PROVIDING RELIABLE <br> CAR RENTALS</h2>
+
+    <div class="cont-vehiculo">
+        <img src="img/Image.png"data-aos="zoom-in" data-aos-easing="ease-in-back"
+        data-aos-delay="100"
+        data-aos-offset="0" alt="Vehiculo">
+    </div>
+
+    <div class="fila"data-aos="fade-down-left">
+        <div class="item">
+            <span><i class="fa-solid fa-map-location-dot"></i></span>
+            <div class="info">
+                <h4>CROSS COUNTRY DRIVE</h4>
+                <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime ut iste at doloremque laborum sint consequatur dolorum, nobis quidem asperiores.</P>
+            </div>
+        </div>
+
+        <div class="item reverse">
+    
+            <div class="info">
+                <h4>RESERVE ANYTIME</h4>
+                <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quibusdam cum labore quisquam ab ratione minus ullam eius unde laudantium.</P>
+            </div>
+            <span><i class="fa-solid fa-clock"></i></span>
+        </div>
+
+
+        <div class="item">
+            <span><i class="fa-solid fa-tags"></i></span>
+            <div class="info">
+                <h4>NO HIDDEN CHARGES</h4>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magni dolor illo ex reprehenderit tempora expedita aperiam iste iure asperiores.</P>
+            </div>
+        </div>
+
+
+        <div class="item reverse">
+            
+            <div class="info">
+                <h4>24/7 SUPPORT</h4>
+                <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora omnis corrupti nostrum accusamus at molestiae quod architecto assumenda veniam optio.</P>
+            </div>
+            <span><i class="fa-solid fa-user-group"></i></span>
+        </div>
+
+    </div>
+   
+</section>
+
+<section id="brands">
+    <img src="img/Item 1 (1).png"data-aos="flip-up"data-aos-duration="1000" alt="logo empresa">
+    <img src="img/Item 2 (1).png"data-aos="flip-up"data-aos-duration="2000" alt="logo empresa">
+    <img src="img/Item 3.png"data-aos="flip-up"data-aos-duration="3000" alt="logo empresa">
+    <img src="img/Item 4.png" data-aos="flip-up"data-aos-duration="4000"alt="logo empresa">
+    <img src="img/Item 5.png"data-aos="flip-up"data-aos-duration="100" alt="logo empresa ">
+
+</section>
+<section id="testimonials">
+    <div class="left">
+        <h3 >TESTIMONIALS</h3>
+        <h2 data-aos="zoom-in-down">REVIEWED BY OUR CLIENTS </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora hic et sapiente rerum laborum sunt unde explicabo harum? Iure nemo adipisci assumenda quis qui, soluta repellendus quasi dolorem sit cupiditate.</p>
+        <button data-aos="zoom-in-down">Discover More -</button>
+    </div>
+
+    <div class="right">
+        <div class="card-testimonial"data-aos="flip-down"data-aos-duration="2000">
+            <img src="img/Image-22.png" alt="person">
+            <div class="info">
+                <h4>AARON CALDWELL</h4>
+                <h5>Freelance write</h5>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, accusamus quasi voluptate repellat aliquam reiciendis rem, ex magni vero explicabo, cupiditate eveniet reprehenderit veniam.</p>
+
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p><b>5.0</b>/5.0</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="card-testimonial"data-aos="flip-up" data-aos-duration="1500">
+            <img src="img/Image (1).png" alt="person">
+            <div class="info">
+                <h4>AMANDA BEATRIX</h4>
+                <h5>Lawyer</h5>
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, accusamus quasi voluptate repellat aliquam reiciendis rem, ex magni vero explicabo, cupiditate eveniet reprehenderit veniam.</p>
+
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <p><b>5.0</b>/5.0</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="blog">
+    <h3>BLOG & MEWS</h3>
+    <h2>OUR RECENTLY POST</h2>
+    <div class="fila">
+        <article class="col-blog">
+            <p class="category">Rent tips</p>
+        <img src="img/female-driver-looking-satisfied-with-her-new-moder-2023-11-27-05-17-09-utc 1 (1).png" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"alt="mujer y hombre">
+        <div class="info">
+            <h4>A COMPLETE GUIDE ON HOW NOT TO BE ACCUSED <br> OF STEALING A REANDER CAR </h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias quis eius libero mollitia magni esse officia!</p>
+
+        <div class="fila">
+            <div class="autor">
+                <img src="img/Image (2).png" alt="AUTOR">
+                <p>Abigail Barnes</p>
+            </div>
+            <p><i class="fa-regular fa-calendar-days"> 8 abril 2025</i></p>
+            <a href="#">Read More-</a>
+        </div>
+        </div>
+
+
+
+        </article>
+        <article class="col-blog">
+            <p class="category">News</p>
+            <img src="img/young-afro-businessman-at-driver-39-s-seat-smilin-2023-11-27-05-28-59-utc 2.png"  data-aos="fade-up"
+            data-aos-duration="3000"alt="hombre">
+            <div class="info">
+                <h4>A COMPLETE GUIDE ON HOW NOT TO BE ACCUSED <br> OF STEALING A REANDER CAR </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit molestias quis eius libero mollitia magni esse officia!</p>
+    
+            <div class="fila">
+                <div class="autor">
+                    <img src="img/Image (2).png" alt="AUTOR">
+                    <p>Abigail Barnes</p>
+                </div>
+                <p><i class="fa-regular fa-calendar-days"> 8 abril 2025</i></p>
+                <a href="#" >Read More-</a>
+            </div>
+            </div>
+            </article>
+
+            </div>
+
+            <button  data-aos="zoom-out-right">DISCOVER MORE BLOG-</button>
+
+    
+  
+</section>
+</main>
+<footer>
+    <div class="fila" data-aos="flip-down">
+        <div class="col-footer" data-aos="zoom-out-down"data-aos-easing="linear"
+        data-aos-duration="700">
+            <a href="#"><img src="img/Logo-w.png" alt="logo"></a>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur ipsa, earum recusandae dignissimos necessitatibus cupiditate eos accusantium quia quod fuga!</p>
+            <ul> 
+                <a href="#">FB . </a>
+                <a href="#">IG . </a>
+                <a href="#">LI . </a>
+                <a href="#">YT . </a>
+                <a href="#">TW . </a>
+            </ul>
+          
+        </div>
+        <div class="col-footer" data-aos="zoom-out-down" data-aos-easing="linear"
+        data-aos-duration="500">
+            <h3><i class="fa-solid fa-clock"></i>WORKING HOURS</h3>
+            <p>Mon-FRI:09:00 AM - 09:00 PM</p>
+            <p>Sat:09:00 AM - 07:00 PM</p>
+            <p>Sun:Clased</p>
+        </div>
+        <div class="col-footer" data-aos="zoom-out-down"data-aos-easing="linear"
+        data-aos-duration="300">
+            <h3><i class="fa-solid fa-circle-user"></i>QUICK CONTACT</h3>
+            <p>Office:42 Marine Parade, Australia</p>
+            <p>Mail:info@8pxlstudio.com</p>
+            <p>Phone:+0123456789</p>
+        </div>
+    </div>
+        <hr>
+        <div class="fila">
+            <p>Copyright 2025 Driveways. All Rights Reserved</p> <p>Privacy policy | Terms of Service</p>
+        </div>
+    </div>
+</footer>
+
+
+<div id="modal-1">
+    <div class="panel">
+        <h2>CONOCE NUESTROS ULTIMOS VEHICULOS</h2>
+        <button  onclick="modalVideo()"><i class="fa-solid fa-circle-xmark"></i></button>
+        <iframe width="100%" height="450" src="https://www.youtube.com/embed/Dl9aKvU4i18?si=lpQDoqDSC2keadnC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/main.js"></script>
+<script>
+    AOS.init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1261 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+:root{
+    --primary-color:#fe9d2a;
+    --secundary-color:#030921;
+    --third-color:#f84445;
+    --bg-white:#fff;
+    --bg-blue:#f3f4f9;
+    --text-color:#5B6B7A;
+}
+body{
+    width: 100%;
+    position: relative;
+    z-index: 0;
+}
+#modal-1{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #00000097;
+    top: -150%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    transition: 1s;
+
+}
+#modal-1.active{
+    top: 0;
+}
+#modal-1 .panel{
+    width: 80%;
+    padding: 50px;
+    background:var(--bg-white);
+    position: relative;
+
+}
+.panel h2{
+    color: var(--secundary-color);
+    font-size: 32px;
+    padding-bottom: 12px;
+    border-radius: 1px solid var(--text-color);
+    margin-bottom: 12px;
+}
+.panel button{
+    background: var(--primary-color);
+    color: var(--secundary-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    font-size: 18px;
+    top: 20px;
+}
+header{
+    width: 100%;
+    position: relative;
+    background: var(--bg-blue);
+}
+header nav{
+    width: 100%;
+    padding: 20px 5% ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header nav.mobile{
+    display:none;
+}
+nav.mobile button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background:#eaeaea ;
+    border:1px solid #bababa;
+    color: var(--primary-color);
+}
+
+#cont-menu-mobile{
+    width: 50%;
+    position: fixed;
+    right: -100%;
+    background: #eaeaea;
+    padding: 20px;
+    top: 89px;
+    z-index: 9;
+    height: 90vh;
+    transition: .5s;
+}
+#cont-menu-mobile.active{
+    right:0;
+    
+}
+#cont-menu-mobile a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    border-bottom: 1px solid #cecece;
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+header nav ul{
+    display: flex;
+
+}
+header nav li{
+    margin: 0 20px;
+    list-style: none;
+    position: relative;
+    padding: 20px 0;
+
+}
+header nav li ul{
+    display: none;
+    position: absolute;
+    top:100%;
+    left: -20px;
+    background: var(--bg-white);
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1;
+}
+nav li:hover ul{
+    display: block;
+}
+header li a,
+header nav a{
+    text-decoration: none;
+    color: #bebebe;
+    transition: .4s;
+    font-weight: 600;
+}
+header li a:hover,
+ header nav a:hover{
+    color:var(--primary-color);
+}
+#hero{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#hero .hero-left{
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 80px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+
+}
+.hero-left h3{
+    color: var(--third-color);
+    font-size: 22px;
+    font-weight: 400;
+}
+.hero-left h1{
+    font-size: 80px;
+    font-weight: 800;
+    color: var(--secundary-color);
+
+}
+.hero-left .hero-buttons{
+    display:flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.hero-buttons a{
+    background: var(--primary-color);
+    padding: 18px 70px 18px 30px; 
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 20px;
+    clip-path: polygon(
+        0 0,                               
+        calc(100% - 20px) 0,
+        100% 20px,
+         100% 100%, 
+         20px 100%, 
+         0 calc(100% - 20px)
+    );
+
+}
+.hero-buttons p{
+    font-size: 24px;
+    color: var(--text-color);
+    margin-right: 20px;
+    
+
+}
+.hero-buttons button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    background: #f5e3cf;
+    cursor: pointer;
+}
+.hero-buttons button i{
+    color: var(--primary-color);
+    font-size: 20px;
+}
+.hero-right{
+    width: 50%;
+    min-height: 90hv;
+    background: url(../img/radiator-grille.png);
+    background-size: cover;
+    background-position-x: left;
+    background-position-y: top;
+    position: relative;
+}
+.hero-right .hero-info-right{
+    background: var(--secundary-color);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 330;
+    padding: 40px;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
+    
+}
+.hero-info-right h4{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+.hero-info-right img{
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+.hero-info-right h4 b{
+    color: var(--third-color);
+}
+
+
+.hero-info-left{
+    margin-top: 50px;
+}
+
+.hero-info-left h4{
+    color: var(--third-color);
+    font-size: 22px;
+    font-weight: 800;
+}
+.hero-info-left p{
+    color: var(--text-color);
+    font-size: 20px;
+    font: top 12px;
+}
+
+
+
+main{
+    width: 100%;
+    position: relative;
+}
+#counters{
+    width: 100%;
+    background: var(--secundary-color);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 80px 5%;
+
+}
+#counters h3{
+    font-size: 18;
+    color: var(--bg-white);
+    margin-bottom: 12px;
+    font-weight: 100;
+}
+
+#counters p{
+    color: var(--bg-white);
+    font-size: 70px;
+    font-weight: 800;
+    
+
+}
+#about{
+    width: 100%;
+    padding: 180px 0 180px 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#about .about-left{
+    width: 55%;
+    padding-right: 70px;
+
+}
+.about-left h3{
+    color: var(--third-color);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+.about-left h2{
+    color: var(--secundary-color);
+    font-size:50px ;
+    font-weight:800 ;
+    padding-right: 60px;
+    margin-bottom: 40px;
+}
+.about-left p{
+    color: var(--text-color);
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.about-left .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.about-left .fila .col-about{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.col-about span{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    clip-path: polygon(64% 0, 100% 25%, 100% 100%, 0 100%, 0 0);
+}
+.col-about span i{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+.col-about h4{
+    font-size: 20px;
+    color: var(--primary-color);
+    margin-left: 16px;
+
+}
+.col-about.blue span{
+    background: var(--secundary-color);
+}
+.col-about.blue h4{
+    color: var(--secundary-color);
+}
+.about-left hr{
+    border-color:var(--text-color);
+    margin: 40px  0;
+    border-top-style: hidden;
+}
+.about-left .col-ceo .datos{
+    display: inline-block;
+    margin-left: 16px;
+}
+.about-left .datos h3{
+    font-size: 18px;
+    margin: 0;
+    color: var(--secundary-color);
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+.about-left .datos p{
+    color: var(--third-color);
+    font-size: 14px;
+}
+.about-right{
+    width: 45%;
+    background:url(../img/young-businessman.png);
+    background-size: cover;
+    position: relative;
+}
+.about-right button{
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -34px;
+    top: 100px;
+    border-color: transparent;
+    cursor: pointer;
+}
+.about-right button i{
+    color:var(--bg-white);
+    font-size: 22px;
+}
+#carslist{
+    width: 100%;
+    position: relative;
+    background: var(--bg-blue);
+    padding: 100px 5%;
+}
+#carslist .fila-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+#carslist .fila-title .carslist-left{
+    width: 60%;
+}
+#carslist .fila-title h3{
+    color: var(--third-color);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+}
+#carslist .fila-title h2 {
+    color: var(--secundary-color);
+    font-size:50px ;
+    font-weight:800 ;
+    padding-right: 60px;
+    
+
+}
+#carslist .fila-title button{
+    background: var(--primary-color);
+    padding: 18px 70px 18px 30px;
+    color: var(--bg-white);
+    font-size: 20px;
+    border-color: transparent;
+    clip-path: polygon(86% 0, 100% 22%, 100% 100%, 13% 100%, 0 79%, 0 0);
+}
+#carslist .fila{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#carslist .fila .col-car{
+    display: flex;
+    width: 48%;
+    background: var(--bg-white);
+    margin-bottom: 50px;
+    position: relative;
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 13%);
+
+}
+
+.col-car .left{
+    width: 45%;
+    overflow: hidden;
+    position: relative;
+}
+.col-car .left img{
+    position: absolute;
+    left: -135px;
+    bottom: 12%;
+    
+
+}
+.col-car .right{
+    width: 55%;
+    padding: 30px;
+
+}
+.col-car .right h3{
+    font-size: 50px;
+    color: var(--secundary-color);
+}
+.col-car .right h3 span{
+    font-size: 22px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+.col-car .right h2{
+    font-size: 20px;
+    color: #2e3e4e;
+}
+.col-car ul{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+}
+.col-car ul li{
+    width: 50%;
+    list-style: none;
+    margin: 10px 0;
+    color: var(--text-color);
+    font-size: 14px;
+}
+.col-car ul li i{
+    font-size: 22px;
+    margin-right: 12px;
+}
+
+.col-car .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.col-car .buttons p{
+    font-size: 16px;
+    color: var(--text-color);
+}
+.col-car .buttons button{
+    background: transparent;
+    border: 0 solid transparent;
+    color:#b6b6b6;
+    font-weight: 800;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.col-car .discount{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background:var(--secundary-color);
+    padding: 10px  20px;
+    font-size: 12px;
+    color: var(--bg-white);
+
+}
+
+.col-car hr{
+    margin: 20px 0;
+}
+
+#car-rentals{
+    width: 100%;
+    position: relative;
+    padding: 150px 5% 100px;
+    text-align: center;
+}
+#car-rentals h3{
+    color: var(--third-color);
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+#car-rentals h2{
+    color: var(--secundary-color);
+    font-size:50px ;
+    font-weight:800 ;
+    margin-bottom: 40px;
+
+}
+#car-rentals .fila{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 380px;
+    left: 5%;
+}
+#car-rentals .fila .item{
+    width: 35%;
+    display: flex;
+    text-align: left;
+    flex-wrap: wrap;
+    margin-bottom: 75px;
+}
+#car-rentals .item span{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: var(--secundary-color);
+    clip-path: polygon(64% 0, 100% 35%, 100% 100%, 0 100%, 0 0);
+
+}
+#car-rentals span i{
+    color: var(--bg-white);
+    font-size: 22px;
+}
+
+#car-rentals .info{
+    width: 80%;
+    padding-left: 12px;
+}
+#car-rentals .info h4{
+    font-size: 20px;
+    color: var(--secundary-color);
+    font-weight: 800;
+
+}
+#car-rentals .info p{
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+#brands{
+    width: 100%;
+    text-align: center;
+    background: var(--secundary-color);
+    padding: 60px 0;
+    
+}
+#brands img{
+    margin: 0 20px;
+    filter: grayscale(1);
+}
+
+
+#testimonials{
+    width: 100%;
+    position: relative;
+    padding: 150px 5%;
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+}
+
+#testimonials .left{
+    width: 50%;
+    padding-right: 80px;
+
+}
+#testimonials .left h3{
+    color: var(--third-color);
+    font-size: 22px; 
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    
+}
+#testimonials .left h2{
+    color: var(--secundary-color);
+    font-size:50px ;
+    font-weight:800 ;
+    padding-right: 60px;
+    margin-bottom: 40px;
+
+
+}
+
+#testimonials .left p{
+    font-size: 18px;
+    color: var(--text-color);
+
+}
+#testimonials .left button{
+    background: var(--primary-color);
+    padding: 18px 70px 18px 30px;
+    color: var(--bg-white);
+    font-size: 20px;
+    border-color: transparent;
+    margin-top: 40px;
+    cursor: pointer;
+    clip-path: polygon(
+        0 0,                               
+        calc(100% - 20px) 0,
+        100% 20px,
+         100% 100%, 
+         20px 100%, 
+         0 calc(100% - 20px)
+    );
+
+}
+
+#testimonials .right{
+    width: 50%;
+}
+#testimonials .card-testimonial{
+    width: 100%;
+    padding: 25px;
+    background: var(--bg-blue);
+    margin: 30px 0;
+    display: flex;
+}
+#testimonials .card-testimonial img{
+    width: 60px;
+    height: 60px;
+}
+#testimonials .card-testimonial .info{
+    width: 80%;
+    margin-left: 20px;
+
+}
+#testimonials .info h4{
+    font-size: 20px;
+    color: var(--secundary-color);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+#testimonials .info h5{
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+#testimonials .info p{
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+#testimonials .stars{
+    display: flex;
+    align-items: center;
+}
+#testimnials .stars i{
+    font-size: 14px;
+    color: var(--primary-color);
+    margin: 0  3px;
+}
+#testimonials .stars p{
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 0;
+
+}
+#testimonials .stars p b{
+    color: var(--primary-color);
+    font-weight: 400;
+
+}
+#blog{
+    width: 100%;
+    text-align: center;
+    padding: 20px 5% 80px;
+    position: relative;
+}
+#blog h3{
+    color: var(--third-color);
+    font-size: 22px; 
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    
+}
+#blog h2{
+    color: var(--secundary-color);
+    font-size:50px ;
+    font-weight:800 ;
+    margin-bottom: 40px;
+
+}
+#blog .fila{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+#blog .fila .col-blog{
+    width: 46%;
+    background: var(--bg-blue);
+    position: relative;
+
+}
+#blog .col-blog .info{
+    padding: 24px;
+    text-align: left;
+}
+#blog .info h4{
+    font-size:18px;
+    color:var(--secundary-color);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    align-items: center;
+
+
+}
+#blog .info p{
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 16px;
+}
+#blog .info .fila{
+    border-top: 1px solid #bebebe;
+    padding-top: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+}
+#blog .info .fila .autor{
+    display: flex;
+    align-items: center;
+}
+#blog .info .fila .autor img{
+    width: 40px;
+}
+#blog .autor p{
+    margin-bottom: 0;
+    margin-left: 8px;
+}
+#blog .infi .fila p{
+    margin-bottom: 0;
+}
+#blog .info p i{
+    margin-right: 8px;
+}
+#blog .info .fila a{
+    color: #bebebe;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 18px;
+}
+#blog .col-blog img{
+    width: 100%;
+}
+#blog .category{
+    position: absolute;
+    background: var(--secundary-color);
+    color: var(--bg-white);
+    font-size: 14px;
+    padding: 8px 12px;
+    left: 0;
+    top: 30px;
+    clip-path: polygon(73% 0, 100% 39%, 100% 100%, 0 100%, 0 0);
+
+}
+#blog button{
+    padding: 18px 70px 18px 30px; 
+    color:var(--text-color);
+    font-size: 20px;
+    border-color: transparent;
+    background: #dfdddd;
+    margin: 60px 0 ;
+    cursor: pointer;
+    clip-path: polygon(
+        0 0,                               
+        calc(100% - 20px) 0,
+        100% 20px,
+         100% 100%, 
+         20px 100%, 
+         0 calc(100% - 20px)
+    );
+}
+footer{
+    width: 100%;
+    padding: 50px 5%;
+    background-color: var(--secundary-color);
+}
+footer .fila{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+footer .fila .col-footer{
+    width: 30%;
+}
+footer .fila .col-footer a img{
+    margin-bottom: 30px;
+}
+footer .fila .col-footer h3{
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+footer .fila .col-footer ul{
+    display: flex;
+}
+footer .fila .col-footer ul a{
+    color: var(--bg-white);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+}
+footer hr{
+    margin: 20px 0;
+
+}
+footer .fila p{
+    color: var(--bg-white);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+/* ESTILOS TABLET */
+@media screen and (min-width:768px) and (max-width:1024px){
+
+    header nav.mobile{
+        display: flex;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: var(--bg-blue);
+        z-index: 9;
+    }
+    #hero{
+        padding-top: 80px;
+    }
+
+    header nav{
+        display: none;
+    }
+    #hero .hero-left{
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-left .hero-buttons{
+        justify-content: center;
+    }
+    .hero-info-left{
+        text-align: start;
+    }
+    .hero-right{
+        height: 55vh;
+        width: 100%;
+    }
+    #counters{
+        flex-wrap: wrap;
+    
+    }
+    #counters .col-counter{
+        width: 50%;
+    }
+    #about .about-left{
+        width: 100%;
+    }
+    #about .about-right{
+        width: 100%;
+        height: 50vh;
+        margin-top: 50px;
+    }
+    .about-right button{
+        top: -30px;
+        left: 245px;
+        width: 100px;
+        height: 100px;
+
+    }
+    #carslist .fila-title{
+        display: contents;
+    }
+    #carslist .fila .col-car{
+        width: 100%;
+        margin-top: 50px;
+
+    }
+    #carslist .fila-title .carslist-left{
+        width: 100%;
+    }
+
+    #carslist .fila-title button{
+        margin-top: 50px;
+    }
+
+
+
+
+
+    #car-rentals .fila {
+        position: static;
+    }
+    #car-rentals .fila .item{
+        width: 100%;
+    }
+    #car-rentals .fila .item.reverse{
+        flex-direction:row-reverse;
+    }
+    #car-rentals .info{
+        width: 91%
+    }
+
+    #brands{
+    
+        display: flex;
+        overflow-x:scroll ;
+    }
+
+    #testimonials .right{
+        width: 100%;
+
+    }
+    
+    #testimonials .left{
+        width: 100%;
+    }
+
+    #blog .fila .col-blog{
+        width: 100%;
+        margin-bottom: 55px;
+    
+    }
+
+    footer .fila{
+        width: 100%;
+        display: contents;
+        margin: 0 40px;
+    }
+    footer .fila .col-footer{
+        margin-bottom: 40px;
+    }
+    footer hr{
+        margin-bottom: 35px;
+    }
+    }
+
+
+
+    
+
+ /* smartphone */
+ @media screen and (min-width:320px) and (max-width:767px){
+    
+ header nav{
+    display: none
+}
+header nav.mobile{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: var(--bg-blue);
+    z-index: 9;
+}
+#hero{
+    padding-top: 80px;
+}
+    .cont-vehiculo img{
+        width: 100%;
+}
+footer .fila p{
+    margin-bottom: 20px;
+}
+header nav.mobile{
+    display: flex;
+}
+#hero .hero-left{
+    width: 100vh;
+    text-align: left;
+    margin-left: 30px;
+    padding-right: 5px;
+}
+.hero-left h1{
+    font-size: 40px;
+}
+
+.hero-left .hero-buttons{
+    justify-content: center;
+}
+.hero-buttons a{
+    padding: 10px 70px 11px 30px;
+    font-size: 15px;
+}
+.hero-info-left{
+    text-align: start;
+}
+.hero-info-left p{
+    font-size: 12px;
+
+}
+.hero-right{
+    height: 55vh;
+    width: 100%;
+}
+#counters{
+    flex-wrap: wrap;
+
+}
+#counters .col-counter{
+    width: 50%;
+}
+#about .about-left{
+    width: 100%;
+}
+
+#about .about-right{
+    width: 100%;
+    height: 31vh;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+
+.about-right button{
+    top: -20px;
+    left: 150px;
+    width: 50px;
+    height: 50px;
+}
+.about-left h2{
+    font-size: 35px;
+}
+.about-left p{
+    font-size: 12px;
+}
+.col-about span{
+    height: 40px;
+
+}
+.col-about h4{
+    font-size: 14px;
+}
+.about-left .fila .col-ceo{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+
+}
+.about-left .fila .col-ceo-img{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-left .fila .col-ceo-img img{
+    width: 100%;
+}
+
+
+#about .about-right{
+   width: 100%;
+   height: 31vh;
+   margin-right: 20px;
+   margin-top: 50px;
+}
+
+#carslist .fila-title{
+    display: contents;
+}
+#carslist .fila .col-car{
+    width: 100%;
+    margin-top: 50px;
+
+}
+#carslist .fila-title .carslist-left{
+    width: 100%;
+}
+
+#carslist .fila-title button{
+    margin-top: 50px;
+}
+
+
+.col-car .left{
+    display: none;
+}
+.col-car .right{
+    width: 100%;
+}
+
+
+
+#car-rentals .fila {
+    position: static;
+}
+
+#car-rentals h2{
+    font-size: 30px;
+    padding-right: 0;
+}
+
+#car-rentals .fila .item{
+    width: 100%;
+    flex-wrap: nowrap;
+}
+#car-rentals .item span{
+    height: 40%;
+}
+#car-rentals .info h4{
+    font-size: 15px;
+
+}
+#car-rentals .info p{
+    font-size: 14px;
+}
+#car-rentals .fila .item.reverse{
+    flex-direction:row-reverse;
+}
+#car-rentals .info{
+    width: 100%
+}
+#car-rentals .fila .item{
+    width: 100%;
+}
+/* seccion brands------------------------------------------- */
+#brands{
+
+    display: flex;
+    overflow-x:scroll ;
+}
+
+#testimonials .right{
+    width: 100%;
+
+}
+#testimonials .left h2{
+    font-size: 25px;
+}
+#testimonials .left p{
+    font-size: 15px;
+}
+#testimonials .left{
+    width: 100%;
+}
+
+#blog .fila .col-blog{
+    width: 100%;
+    margin-bottom: 55px;
+
+}
+#blog h2{
+    font-size: 35px;
+}
+
+footer .fila{
+    width: 100%;
+    display: contents;
+    margin: 0 40px;
+}
+footer .fila .col-footer{
+    margin-bottom: 40px;
+}
+footer hr{
+    margin-bottom: 35px;
+}
+header nav{
+    display: none
+}
+#blog .info p i{
+    display: none;
+}
+#car-rentals h2{
+    font-size: 20px;
+}
+
+#carslist .fila-title h2{
+    font-size: 25px;
+}
+}
+
+
+
+
+
+
+
+    
+
+
+
+
